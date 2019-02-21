@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TimeTable" targetNamespace="http://tempuri.org/TimeTable.xsd" xmlns:mstns="http://tempuri.org/TimeTable.xsd" xmlns="http://tempuri.org/TimeTable.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString2 (Settings)" PropertyReference="ApplicationSettings.FebroTrain_5293564.Properties.Settings.GlobalReference.Default.ConnectionString2" Provider="System.Data.OracleClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TIMETABLETableAdapter" GeneratorDataComponentClassName="TIMETABLETableAdapter" Name="TIMETABLE" UserDataComponentName="TIMETABLETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString2 (Settings)" DbObjectName="A5293564.TIMETABLE" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT T_CODE, S_STATION, EXPR1, D_STARTTIME, D_GOAL FROM A5293564.TIMETABLE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="T_CODE" DataSetColumn="T_CODE" />
+              <Mapping SourceColumn="S_STATION" DataSetColumn="S_STATION" />
+              <Mapping SourceColumn="EXPR1" DataSetColumn="EXPR1" />
+              <Mapping SourceColumn="D_STARTTIME" DataSetColumn="D_STARTTIME" />
+              <Mapping SourceColumn="D_GOAL" DataSetColumn="D_GOAL" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TimeTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TimeTable" msprop:Generator_UserDSName="TimeTable">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TIMETABLE" msprop:Generator_TableClassName="TIMETABLEDataTable" msprop:Generator_TableVarName="tableTIMETABLE" msprop:Generator_TablePropName="TIMETABLE" msprop:Generator_RowDeletingName="TIMETABLERowDeleting" msprop:Generator_RowChangingName="TIMETABLERowChanging" msprop:Generator_RowEvHandlerName="TIMETABLERowChangeEventHandler" msprop:Generator_RowDeletedName="TIMETABLERowDeleted" msprop:Generator_UserTableName="TIMETABLE" msprop:Generator_RowChangedName="TIMETABLERowChanged" msprop:Generator_RowEvArgName="TIMETABLERowChangeEvent" msprop:Generator_RowClassName="TIMETABLERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="T_CODE" msprop:Generator_ColumnVarNameInTable="columnT_CODE" msprop:Generator_ColumnPropNameInRow="T_CODE" msprop:Generator_ColumnPropNameInTable="T_CODEColumn" msprop:Generator_UserColumnName="T_CODE" type="xs:decimal" />
+              <xs:element name="S_STATION" msprop:Generator_ColumnVarNameInTable="columnS_STATION" msprop:Generator_ColumnPropNameInRow="S_STATION" msprop:Generator_ColumnPropNameInTable="S_STATIONColumn" msprop:Generator_UserColumnName="S_STATION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EXPR1" msprop:Generator_ColumnVarNameInTable="columnEXPR1" msprop:Generator_ColumnPropNameInRow="EXPR1" msprop:Generator_ColumnPropNameInTable="EXPR1Column" msprop:Generator_UserColumnName="EXPR1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="D_STARTTIME" msprop:Generator_ColumnVarNameInTable="columnD_STARTTIME" msprop:Generator_ColumnPropNameInRow="D_STARTTIME" msprop:Generator_ColumnPropNameInTable="D_STARTTIMEColumn" msprop:Generator_UserColumnName="D_STARTTIME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="D_GOAL" msprop:Generator_ColumnVarNameInTable="columnD_GOAL" msprop:Generator_ColumnPropNameInRow="D_GOAL" msprop:Generator_ColumnPropNameInTable="D_GOALColumn" msprop:Generator_UserColumnName="D_GOAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
